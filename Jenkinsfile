@@ -59,13 +59,15 @@ node {
         sh "scp -i ${KEY} spring-boot-server/target/${artifact} shane@${ip}:docker/home"
 
         echo "Docker Phase Step 3: Kill previous deployment."
-        // sh "ssh -i ${KEY} shane@${ip} docker stop home"
+        sh "ssh -i ${KEY} shane@${ip} docker stop home"
+        sh "ssh -i ${KEY} shane@${ip} docker container rm home"
+        sh "ssh -i ${KEY} shane@${ip} docker rmi home"
 
         echo "Docker Phase Step 4: Build Image."
-        sh "ssh -i ${KEY} shane@${ip}:docker/home docker build --no-cache -t home ."
+        sh "ssh -i ${KEY} shane@${ip} docker build --rm -t home docker/home"
 
         echo "Deploying Phase Step 5: Deploy new spring boot artifact."
-        sh "ssh -i ${KEY} shane@${ip} docker run -name home -p 80:80 -d home"        
+        sh "ssh -i ${KEY} shane@${ip} docker run --name home -p 80:80 -d home"        
       }
 
       // Notify Successful
