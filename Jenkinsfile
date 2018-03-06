@@ -52,13 +52,19 @@ node {
       // Must pretend to be jenkins user. sudo su jenkins. 
       withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-server', keyFileVariable: 'KEY')]) {
         
-        echo "Docker Phase Step 1: Kill previous deployment."
+        echo "Docker Phase Step 1: Move Dockerfile"
+        sh "scp -i ${KEY} Dockerfile shane@${ip}:docker/home"
+
+        echo "Docker Phase Step 2: Move Artifact"
+        sh "scp -i ${KEY} spring-boot-server/target/${artifact} shane@${ip}:docker/home"
+
+        echo "Docker Phase Step 3: Kill previous deployment."
         // sh "ssh -i ${KEY} shane@${ip} docker stop home"
 
-        echo "Docker Phase Step 2: Build Image."
-        sh "ssh -i ${KEY} shane@${ip} docker build --no-cache -t home ."
+        echo "Docker Phase Step 4: Build Image."
+        sh "ssh -i ${KEY} shane@${ip}:docker/home docker build --no-cache -t home ."
 
-        echo "Deploying Phase Step 3: Deploy new spring boot artifact."
+        echo "Deploying Phase Step 5: Deploy new spring boot artifact."
         sh "ssh -i ${KEY} shane@${ip} docker run -name home -p 80:80 -d home"        
       }
 
