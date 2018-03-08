@@ -1,5 +1,3 @@
 @import '../../app.component.scss';
 
-nav {
-	background-color: map-get($colors, primary);
-}
+nav { background-color: map-get($colors, primary); }
