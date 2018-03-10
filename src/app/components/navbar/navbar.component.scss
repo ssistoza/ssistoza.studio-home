@@ -1,3 +1,7 @@
 @import '../../app.component.scss';
 
 nav { background-color: map-get($colors, primary); }
+.svg { 
+	margin-left: 5px;
+	margin-top: 7px;
+}
