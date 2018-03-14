@@ -18,6 +18,6 @@ public class MainCtrl {
 
     @GetMapping("/syno")
     public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
-        return new ModelAndView("redirect:/https://10.0.0.10:5001", model);
+        return new ModelAndView("redirect:https://10.0.0.10:5001", model);
     }
 }
