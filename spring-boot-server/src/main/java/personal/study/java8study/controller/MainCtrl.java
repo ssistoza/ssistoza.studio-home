@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-
 @Controller
 @RequestMapping("/")
 public class MainCtrl {
@@ -26,7 +24,7 @@ public class MainCtrl {
      */
     @GetMapping("/syno/${path}")
     public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model, @PathVariable String path) {
-        return new ModelAndView("forward:https://ssistoza.studio:5001/${path}", model);
+        return new ModelAndView("forward:https://ssistoza.studio:5001/"+path, model);
     }
 
 }
