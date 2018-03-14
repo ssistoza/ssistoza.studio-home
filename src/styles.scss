@@ -1,4 +1,4 @@
-// Global Styles
+// Global Vars Here.
 $colors: (
   primary:    #488aff,
   secondary:  #32db64,
@@ -7,3 +7,9 @@ $colors: (
   dark:       #222,
   main:       #9F26AA
 );
+
+@mixin centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

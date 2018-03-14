@@ -1,0 +1,6 @@
+@import '../../app.component.scss';
+
+#center-content {
+	height: 100%;
+	@include centering;
+}
