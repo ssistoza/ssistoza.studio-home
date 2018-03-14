@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public title = [ 'Welcome', 'Aloha', 'Sawatdee', 'Alola' ];
 
   constructor() { }
 
+  showTitle() { return this.title[0]; }
+
   ngOnInit() {
   }
-
-  
 }
