@@ -22,9 +22,9 @@ public class MainCtrl {
      * @param model
      * @return ModelAndView : Redirects user to Synology URL.
      */
-    @GetMapping("/syno/${path}")
-    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model, @PathVariable String path) {
-        return new ModelAndView("forward:https://ssistoza.studio:5001/"+path, model);
+    @GetMapping("/syno")
+    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
+        return new ModelAndView("forward:https://ssistoza.studio:5001/", model);
     }
 
 }
