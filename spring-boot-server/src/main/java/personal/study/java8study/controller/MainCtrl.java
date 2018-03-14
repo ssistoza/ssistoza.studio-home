@@ -19,7 +19,8 @@ public class MainCtrl {
     }
 
     @GetMapping("/syno")
-    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model, HttpServletRequest req) {
-        return new ModelAndView("redirect:https://ssistoza.studio:5001", model);
+    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
+        return new ModelAndView("forward:https://ssistoza.studio:5001", model);
     }
+
 }
