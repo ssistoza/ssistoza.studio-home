@@ -1,6 +1,8 @@
 @import '../../app.component.scss';
 
 #center-content {
-	height: 100%;
+	@include all-height;
 	@include centering;
 }
+
+h1 { font-size: 10vw; }

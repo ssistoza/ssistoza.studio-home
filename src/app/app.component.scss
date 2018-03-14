@@ -9,6 +9,14 @@
 	opacity: 0.9;
 }
 
+.top-layer {
+	position: fixed;
+	margin-top: 10px;
+	margin-left: 10px;
+	z-index: 2;
+}
+
 .container {
-	height: 100%;
+	z-index: 1;
+	@include all-height;
 }

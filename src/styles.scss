@@ -13,3 +13,7 @@ $colors: (
 	justify-content: center;
 	align-items: center;
 }
+
+@mixin all-height {
+	height: 100%;
+}
