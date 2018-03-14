@@ -19,12 +19,16 @@ public class MainCtrl {
 
     /**
      * Redirects to Synology Login Screen.
-     * @param model
+     * @param model Placeholder.
      * @return ModelAndView : Redirects user to Synology URL.
      */
     @GetMapping("/syno")
-    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
+    public ModelAndView redirectSynoStation(ModelMap model) {
         return new ModelAndView("forward:https://ssistoza.studio:5001/", model);
     }
 
+    @GetMapping("/jenkins")
+    public ModelAndView redirectJenkins(ModelMap model) {
+        return new ModelAndView("forward:https://ssistoza.studio:8088/", model);
+    }
 }
