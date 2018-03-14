@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/")
 public class MainCtrl {
@@ -17,7 +19,7 @@ public class MainCtrl {
     }
 
     @GetMapping("/syno")
-    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
-        return new ModelAndView("redirect:https://10.0.0.10:5001", model);
+    public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model, HttpServletRequest req) {
+        return new ModelAndView("redirect:https://ssistoza.studio:5001", model);
     }
 }
