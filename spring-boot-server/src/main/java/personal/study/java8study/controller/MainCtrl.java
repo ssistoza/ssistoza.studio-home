@@ -20,7 +20,7 @@ public class MainCtrl {
 
     @GetMapping("/syno")
     public ModelAndView redirectWithUsingRedirectPrefix(ModelMap model) {
-        return new ModelAndView("forward:https://ssistoza.studio:5001", model);
+        return new ModelAndView("forward:https://10.0.0.10:5001", model);
     }
 
 }
