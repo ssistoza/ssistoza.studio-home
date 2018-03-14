@@ -24,11 +24,11 @@ public class MainCtrl {
      */
     @GetMapping("/syno")
     public ModelAndView redirectSynoStation(ModelMap model) {
-        return new ModelAndView("forward:https://ssistoza.studio:5001/", model);
+        return new ModelAndView("redirect:https://ssistoza.studio:5001/", model);
     }
 
     @GetMapping("/jenkins")
     public ModelAndView redirectJenkins(ModelMap model) {
-        return new ModelAndView("forward:https://ssistoza.studio:8088/", model);
+        return new ModelAndView("redirect:https://ssistoza.studio:8088/", model);
     }
 }
