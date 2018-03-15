@@ -1,7 +1,4 @@
 <div id="center-content">
-	<h1 class="white-text">{{ title[0] }}</h1>
-	<h1 class="white-text hidden">Aloha</h1>
-	<h1 class="white-text hidden">Sawatdee</h1>
-	<h1 class="white-text hidden">Alola</h1>
+	<h1 class="white-text scale-transition" [ngClass]="transition ? 'scale-in' : 'scale-out'" >{{ title }}</h1>
 </div>
 
