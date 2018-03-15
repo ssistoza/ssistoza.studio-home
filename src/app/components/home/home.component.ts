@@ -20,11 +20,11 @@ export class HomeComponent implements OnInit {
    * @return     {<type>}  { description_of_the_return_value }
    */
   changeTitle() {
-    if (this.selectedTitle > this.titles.length) {
-      this.selectedTitle = 0;
-    } else {
-      this.selectedTitle++;
+    if (this.selectedTitle >= this.titles.length-1) {
+      this.selectedTitle = -1; // Preperation to index to zero.
     }
+    
+    this.selectedTitle++;
     this.title = this.titles[this.selectedTitle];
   }
 
