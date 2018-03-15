@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Shane Avery Sistoza';
+
+  showSidebar: boolean = false;
 }

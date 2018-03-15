@@ -5,7 +5,9 @@
 	<i class="material-icons">menu</i>
 </a>
 
-<div class="container">
-	<router-outlet></router-outlet>
+<div class="row">
+	<app-sidebar class="col" [ngClass]="showSidebar ? 's3 m3 l3 xl3' : 'hidden'"></app-sidebar>
+	<div class="col" [ngClass]="showSidebar ? 's9 m9 l9 xl9' : 's12 m12 m12 l12 xl12'">
+		<router-outlet></router-outlet>
+	</div>
 </div>
-

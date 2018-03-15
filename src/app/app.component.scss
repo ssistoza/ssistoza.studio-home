@@ -9,6 +9,8 @@
 	opacity: 0.9;
 }
 
+.hidden { display: none; }
+
 .top-layer {
 	position: fixed;
 	margin-top: 10px;
@@ -16,7 +18,9 @@
 	z-index: 2;
 }
 
-.container {
+.row {
 	z-index: 1;
 	@include all-height;
 }
+
+.col { @include all-height; }
