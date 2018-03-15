@@ -1,0 +1,18 @@
+@import '../../app.component.scss';
+
+.row { @include all-height; }
+
+.bg-test {
+	@include all-height;
+}
+
+.opacity-test {
+	@include all-height;
+	background-color: map-get($colors, primary);
+	opacity: 0.4;
+	z-index: -1;
+}
+
+.text-test {
+	z-index: 5;
+}
