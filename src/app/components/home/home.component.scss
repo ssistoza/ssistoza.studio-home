@@ -5,6 +5,9 @@
 	@include centering;
 }
 
-h1 { font-size: 10vw; }
+h1 { 
+	font-size: 10vw; 
+	text-shadow: 3px -3px 30px #000;
+}
 
 .hidden { display: none; }
