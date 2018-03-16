@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public titles = [ 'Welcome', 'Aloha', 'Sawatdee', 'Alola' ];
+  public titles = [ 'Welcome', 'Aloha', 'Alola' ];
   public title: String = this.titles[0];
   public transition: boolean = true;
   private selectedTitle: number = 0;
