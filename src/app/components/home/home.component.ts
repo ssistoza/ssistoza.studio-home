@@ -35,7 +35,10 @@ export class HomeComponent implements OnInit {
         // ready to transition to next title screen
         this.transition = false;
       } else {
+
+        // Change Current Title
         this.changeTitle();
+        
         // Scale In Transition Frist.
         this.transition = true;
       }
